@@ -1,10 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [
-    "nextjs",
-    "typescript",
-    "unicorn"
-  ],
+  "plugins": ["nextjs", "typescript", "unicorn"],
   "categories": {
     "correctness": "off"
   },
@@ -64,9 +60,7 @@
   },
   "overrides": [
     {
-      "files": [
-        "**/*.{js,jsx,mjs,ts,tsx,mts,cts}"
-      ],
+      "files": ["**/*.{js,jsx,mjs,ts,tsx,mts,cts}"],
       "rules": {
         "react/jsx-key": "error",
         "react/jsx-no-comment-textnodes": "error",
@@ -92,12 +86,8 @@
         "jsx-a11y/alt-text": [
           "warn",
           {
-            "elements": [
-              "img"
-            ],
-            "img": [
-              "Image"
-            ]
+            "elements": ["img"],
+            "img": ["Image"]
           }
         ],
         "jsx-a11y/aria-props": "warn",
@@ -115,23 +105,14 @@
         "sampleRate": "readonly",
         "WorkletGlobalScope": "readonly"
       },
-      "plugins": [
-        "react",
-        "import",
-        "jsx-a11y"
-      ],
+      "plugins": ["react", "import", "jsx-a11y"],
       "env": {
         "browser": true,
         "node": true
       }
     },
     {
-      "files": [
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.mts",
-        "**/*.cts"
-      ],
+      "files": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
       "rules": {
         "constructor-super": "off",
         "no-class-assign": "off",
@@ -153,9 +134,7 @@
       }
     },
     {
-      "files": [
-        "**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"
-      ],
+      "files": ["**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"],
       "globals": {
         "AudioWorkletGlobalScope": "readonly",
         "AudioWorkletProcessor": "readonly",
@@ -170,18 +149,12 @@
       }
     },
     {
-      "files": [
-        "**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
-        "**/*.story.@(ts|tsx|js|jsx|mjs|cjs)"
-      ],
+      "files": ["**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)", "**/*.story.@(ts|tsx|js|jsx|mjs|cjs)"],
       "rules": {
         "react-hooks/rules-of-hooks": "off",
         "import-x/no-anonymous-default-export": "off"
       },
-      "plugins": [
-        "react",
-        "import"
-      ]
+      "plugins": ["react", "import"]
     }
   ]
 }
