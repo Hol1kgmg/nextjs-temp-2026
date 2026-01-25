@@ -40,6 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# oxlint
+*.bak
+
 ## Panda
 styled-system
 styled-system-studio
