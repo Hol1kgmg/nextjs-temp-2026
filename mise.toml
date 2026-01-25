@@ -1,3 +1,8 @@
 [tools]
+# all
+gitleaks  = "latest"
+lefthook = "latest"
+
 # frontend
 pnpm = "latest"
+node = "24"
