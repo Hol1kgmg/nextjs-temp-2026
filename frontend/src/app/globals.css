@@ -1,42 +1,70 @@
+@layer reset, base, tokens, recipes, utilities;
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ----------------------------------------
+    Theme: Rose Pine
+    https://rosepinetheme.com/
+  ---------------------------------------- */
+  /* colors */
+  --colors-base: light-dark(FAF4ED_1, 232136_1);
+  --colors-surface: light-dark(FFFAF3_1, 2A273F_1);
+  --colors-overlay: light-dark(F2E9E1_1, 393552_1);
+  --colors-muted: light-dark(9893A5_1, 6E6A86_1);
+  --colors-subtle: light-dark(797593_1, 908CAA_1);
+  --colors-text: light-dark(575279_1, E0DEF4_1);
+  --colors-love: light-dark(B4637A_1, EB6F92_1);
+  --colors-gold: light-dark(EA9D34_1, F6C177_1);
+  --colors-rose: light-dark(D7827E_1, EA9A97_1);
+  --colors-pine: light-dark(286983_1, 3E8FB0_1);
+  --colors-foam: light-dark(56949F_1, 9CCFD8_1);
+  --colors-iris: light-dark(907AA9_1, C4A7E7_1);
+  --colors-highlight-low: light-dark(F4EDE8_1, 2A283E_1);
+  --colors-highlight-med: light-dark(DFDAD9_1, 44415A_1);
+  --colors-highlight-high: light-dark(CECACD_1, 56526E_1);
+  --colors-black: #000;
+  --colors-white: #fff;
+  --color-mix-base: light-dark(var(--colors-black), var(--colors-white));
+  --color-mix-ratio-light: 7%;
+  --color-mix-ratio-dark: 12%;
+
+  /* font-sizes */
+  --font-sizes-xs: 0.75rem;
+  --font-sizes-sm: 0.875rem;
+  --font-sizes-md: 1rem;
+  --font-sizes-lg: 1.125rem;
+  --font-sizes-xl: 1.25rem;
+  --font-sizes-2xl: 1.5rem;
+  --font-sizes-3xl: 1.875rem;
+  --font-sizes-4xl: 2.25rem;
+  --font-sizes-5xl: 3rem;
+  --font-sizes-6xl: 4rem;
+  --font-sizes-7xl: 5rem;
+  --font-sizes-8xl: 6rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root[data-theme='light'] {
+  color-scheme: light;
+  --color-mix-ratio: var(--color-mix-ratio-light);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-mix-ratio: var(--color-mix-ratio-dark);
+}
+
+:root[data-theme='system'] {
+  color-scheme: light dark;
+  --color-mix-ratio: var(--color-mix-ratio-light);
+  @media (prefers-color-scheme: dark) {
+    --color-mix-ratio: var(--color-mix-ratio-dark);
   }
 }
 
-html,
+/* 375px未満対応 */
+/* 参考: https://x.com/tak_dcxi/status/1997189125242605941?s=46&t=f_nomWTwjz83k7lIn6s_0w */
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  @media (width < 375px) {
+    zoom: progress(100lvw, 0px, 375px);
+    -webkit-text-size-adjust: initial;
   }
 }

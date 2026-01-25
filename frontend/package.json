@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prepare": "panda codegen",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -20,7 +21,9 @@
   "devDependencies": {
     "@markuplint/jsx-parser": "^4.7.22",
     "@markuplint/react-spec": "^4.5.22",
+    "@pandacss/dev": "^1.8.1",
     "@pandacss/eslint-plugin": "^0.3.0",
+    "@tsconfig/strictest": "^2.0.8",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
