@@ -1,0 +1,3 @@
+[tools]
+# frontend
+pnpm = "latest"
