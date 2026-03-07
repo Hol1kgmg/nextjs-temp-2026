@@ -19,6 +19,9 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@praha/byethrow": "^0.10.0",
+    "@praha/byethrow-docs": "^0.10.0",
+    "jotai": "^2.18.0",
     "next": "16.1.4",
     "react": "19.2.3",
     "react-dom": "19.2.3"
