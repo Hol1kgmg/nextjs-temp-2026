@@ -13,9 +13,10 @@ A Next.js frontend template for 2026.
 
 ## Available Rules
 
-| Rule                    | Applies To | Description                                |
-| ----------------------- | ---------- | ------------------------------------------ |
-| **typescript-patterns** | `**/*.ts`  | TypeScript coding patterns and conventions |
+| Rule                        | Applies To                      | Description                                         |
+| --------------------------- | ------------------------------- | --------------------------------------------------- |
+| **typescript-patterns**     | `**/*.ts`                       | TypeScript coding patterns and conventions          |
+| **frontend-architecture**   | `frontend/src/**/*.{ts,tsx}`    | FSD レイヤー構造・配置ルール・データフロー方針      |
 
 _Note: Rules will be added as the project evolves._
 
