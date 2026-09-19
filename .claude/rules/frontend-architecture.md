@@ -33,6 +33,30 @@ app → widgets → features → entities → shared
 | 複数の entities/features を組み合わせた画面ブロック | `widgets/{name}/` |
 | ページ構成・データ取得の orchestration | `app/` |
 
+## コンポーネント命名規則（BCD Domain 原則）
+
+スライス名（kebab-case）を PascalCase に変換したものを **Domain prefix** とする。
+
+- メインコンポーネント: `{DomainPrefix}.tsx`
+- サブコンポーネント: `{DomainPrefix}{Role}.tsx`
+- サブコンポーネントはスライス直下にフラット配置（サブディレクトリを作らない）
+
+```
+# widgets の例
+widgets/order-list-panel/
+├── OrderListPanel.tsx
+├── OrderListPanelHeader.tsx
+└── OrderListPanelItem.tsx
+
+# features の例
+features/create-order/
+├── CreateOrder.tsx
+├── CreateOrderForm.tsx
+├── CreateOrderConfirm.tsx
+├── actions.ts
+└── types.ts
+```
+
 ## データフロー
 
 ### 読み取り（Read）
